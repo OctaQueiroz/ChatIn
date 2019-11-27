@@ -24,6 +24,8 @@
         android:listSelector="@android:color/transparent"
         android:divider="@android:color/transparent"
         android:background="@color/corFundoChat"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal"
         android:layout_weight="1"/>
 
     <LinearLayout

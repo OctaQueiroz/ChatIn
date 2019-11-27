@@ -3,8 +3,6 @@ package com.example.chatin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.res.ResourcesCompat;
-
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -18,16 +16,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.view.inputmethod.InputMethod;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
-
-
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -37,14 +30,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import static com.example.chatin.TelaLogin.EXTRA_UID;
 import static com.example.chatin.TelaLogin.mAuth;
 import static com.example.chatin.TelaLogin.referencia;
 
@@ -96,7 +87,7 @@ public class TelaChat extends AppCompatActivity {
                     novaMensagem.data = sdf.format(new Date());
                     referencia.child("CHAT").child(String.valueOf(novaMensagem.codigo)).setValue(novaMensagem);
                     texto.setText("");
-                    escondeOTeclado();
+                    //escondeOTeclado();
                 }
             }
         });
@@ -193,7 +184,7 @@ public class TelaChat extends AppCompatActivity {
 
         //Define o título do diálogo
         builder.setTitle("Aviso");
-        //builder.setIcon(R.drawable.ic_logout_verde);
+        builder.setIcon(R.drawable.ic_turnoff);
 
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface arg0, int arg1) {
@@ -211,13 +202,6 @@ public class TelaChat extends AppCompatActivity {
         alerta.show();
     }
 
-    public void escondeOTeclado(){
-        View view = this.getCurrentFocus();
-        if(view!=null){
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(),0);
-        }
-    }
 
     private void verificaLogout(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialogCustom);
@@ -234,7 +218,7 @@ public class TelaChat extends AppCompatActivity {
 
         //Define o título do diálogo
         builder.setTitle("Logoff");
-        //builder.setIcon(R.drawable.ic_logout_verde);
+        builder.setIcon(R.drawable.ic_exit_blue);
 
         layout.addView(textoAlerta);
         builder.setView(layout);

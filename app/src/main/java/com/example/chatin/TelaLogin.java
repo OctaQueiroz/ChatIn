@@ -3,8 +3,6 @@ package com.example.chatin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.res.ResourcesCompat;
-
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -19,7 +17,6 @@ import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -44,8 +41,6 @@ public class TelaLogin extends AppCompatActivity {
     SignInButton signInButton;
     int RC_SIGN_IN;
 
-    public final static String EXTRA_UID = "com.example.chatin.UID";
-
     //Variávei para conexão com o Firebase
 
     public final static FirebaseDatabase banco = FirebaseDatabase.getInstance();
@@ -57,10 +52,6 @@ public class TelaLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_login);
-
-         FirebaseDatabase banco = FirebaseDatabase.getInstance();
-         DatabaseReference referencia = banco.getReference();
-         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
         Window window = this.getWindow();
         window.setStatusBarColor(ContextCompat.getColor(TelaLogin.this,R.color.colorPrimaryDark));
@@ -122,10 +113,11 @@ public class TelaLogin extends AppCompatActivity {
                         firebaseAuthWithGoogle(account);
                     } catch (ApiException e) {
                         dialog.dismiss();
+                        /*
                         // Google Sign In failed, update UI appropriately
                         Toast toast = Toast.makeText(TelaLogin.this, e.toString(), Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM, 0, 0);
-                        toast.show();
+                        toast.show();*/
                     }
                 }else{
                     dialog.dismiss();
@@ -162,7 +154,7 @@ public class TelaLogin extends AppCompatActivity {
 
         //Define o título do diálogo
         builder.setTitle("Aviso");
-        //builder.setIcon(R.drawable.ic_logout_verde);
+        builder.setIcon(R.drawable.ic_turnoff);
 
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface arg0, int arg1) {

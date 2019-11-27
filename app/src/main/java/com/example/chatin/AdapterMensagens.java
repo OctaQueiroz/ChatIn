@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -69,6 +68,7 @@ public class AdapterMensagens extends BaseAdapter {
 
         texto.setText(lista.get(position).texto);
         data.setText(lista.get(position).data);
+
         return view;
     }
 }
