@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "415648443210",
+    "firebase_url": "https://chatin-c915d.firebaseio.com",
+    "project_id": "chatin-c915d",
+    "storage_bucket": "chatin-c915d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415648443210:android:c3d0e96706a92cf2d26fb3",
+        "android_client_info": {
+          "package_name": "com.example.chatin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415648443210-c4tici5ok4f04i248o0h8jjjke73n56q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatin",
+            "certificate_hash": "c626df1f196e8fbd2689b3c8d8048af156e44516"
+          }
+        },
+        {
+          "client_id": "415648443210-85khsieglgsjss3v3aq8snvu9ntfd98r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4SZ74uoA0xqVrOfaGbA2aPet5YP1RHYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415648443210-85khsieglgsjss3v3aq8snvu9ntfd98r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

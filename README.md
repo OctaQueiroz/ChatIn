@@ -1,0 +1,2 @@
+# ChatIn
+ChatIn é um simples chat desenvolvido para dispositivos Android em Java. Ele é completamente integrado com Firebase e utiliza o "Realtime Database" para criar o Chat. Além disso, o Login/Autenticação é realizado por meio da integração da conta Google com Firebase.

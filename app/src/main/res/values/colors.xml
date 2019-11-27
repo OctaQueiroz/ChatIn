@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C103A9F4</color>
+    <color name="colorPrimaryDark">#C2016892</color>
+    <color name="colorAccent">#202020</color>
+    <color name="corMensagemPessoal">#5E6AB90B</color>
+    <color name="corMensagem">#FFFFFF</color>
+    <color name="corFundoChat">#D8D8D8</color>
+</resources>
